@@ -173,7 +173,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-10-28 22:18:43 / 修改时间：22:26:37" itemprop="dateCreated datePublished" datetime="2024-10-28T22:18:43+08:00">2024-10-28</time>
+              <time title="创建时间：2024-10-28 22:18:43 / 修改时间：22:30:45" itemprop="dateCreated datePublished" datetime="2024-10-28T22:18:43+08:00">2024-10-28</time>
             </span>
 
           
@@ -187,7 +187,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="SQL注入入门"><a href="#SQL注入入门" class="headerlink" title="SQL注入入门"></a>SQL注入入门</h1><h5 id="文章内容来自hello-ct-hello-ctf-https-hello-ctf-com-HC-Web-sql-injection-，算是我开始学习信息安全后接触的第一篇技术文章-边看原文边敲的，内容基本一致"><a href="#文章内容来自hello-ct-hello-ctf-https-hello-ctf-com-HC-Web-sql-injection-，算是我开始学习信息安全后接触的第一篇技术文章-边看原文边敲的，内容基本一致" class="headerlink" title="文章内容来自hello-ct[hello-ctf]{https://hello-ctf.com/HC_Web/sql_injection/}，算是我开始学习信息安全后接触的第一篇技术文章(边看原文边敲的，内容基本一致)"></a>文章内容来自hello-ct[hello-ctf]{<a target="_blank" rel="noopener" href="https://hello-ctf.com/HC_Web/sql_injection/}，算是我开始学习信息安全后接触的第一篇技术文章(边看原文边敲的，内容基本一致">https://hello-ctf.com/HC_Web/sql_injection/}，算是我开始学习信息安全后接触的第一篇技术文章(边看原文边敲的，内容基本一致</a>)</h5><hr>
+          <h1 id="SQL注入入门"><a href="#SQL注入入门" class="headerlink" title="SQL注入入门"></a>SQL注入入门</h1><h5 id="文章内容来自hello-ctf，算是我开始学习信息安全后接触的第一篇技术文章-边看原文边敲的，内容基本一致"><a href="#文章内容来自hello-ctf，算是我开始学习信息安全后接触的第一篇技术文章-边看原文边敲的，内容基本一致" class="headerlink" title="文章内容来自hello-ctf，算是我开始学习信息安全后接触的第一篇技术文章(边看原文边敲的，内容基本一致)"></a>文章内容来自<a target="_blank" rel="noopener" href="https://hello-ctf.com/HC_Web/sql_injection/" title="hello-ctf">hello-ctf</a>，算是我开始学习信息安全后接触的第一篇技术文章(边看原文边敲的，内容基本一致)</h5><hr>
 <h2 id="1-基础注入类型"><a href="#1-基础注入类型" class="headerlink" title="1.基础注入类型"></a>1.基础注入类型</h2><h3 id="注入类型判断"><a href="#注入类型判断" class="headerlink" title="注入类型判断"></a>注入类型判断</h3><p>构造闭合:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username,password <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> id <span class="operator">=</span> ?</span><br></pre></td></tr></table></figure><br>?可以有多种闭合方式:$id /  ‘$id’ / “$id” / ($id)<br>可控输入点为?，对应$id，当输入和后台语句的单引号、双引号或括号配对时，以如下代码为例<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username,password <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> id <span class="operator">=</span> &quot;$id&quot;</span><br></pre></td></tr></table></figure><br>使传入的$id为‘ 1” ’时,后台执行为<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username,password <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> id <span class="operator">=</span> &quot;1&quot; &quot;</span><br></pre></td></tr></table></figure></p>
 <p>对1完成了构造闭合，但1”与前面的”匹配导致后面的”没有双引号与之配对，报错  </p>
 <ul>
