@@ -1,0 +1,10 @@
+{%- for link in include.links -%}
+    {%- assign link_url = link[1].url | default: link[1] -%}
+    {%- assign link_start = link_url | slice: 0, 1 -%}
+    {%- assign link_prefix = link_url | slice: 0, 2 -%}
+    {%- if link_start == '/' and link_prefix != '//' -%}
+        {%- assign link_url = link_url | relative_url -%}
+    {%- endif -%}
+    {%- assign link_target = link[1].target | default: '_blank' -%}
+    <a target="{{ link_target | escape }}" rel="noopener" href="{{ link_url | escape }}">[{{ link[0] }}]</a>
+{% endfor %}

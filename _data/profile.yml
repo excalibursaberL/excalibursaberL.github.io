@@ -1,0 +1,58 @@
+primary_name: "Jiaxing Li"
+secondary_name: ""
+navbar_name: "Jiaxing Li"
+
+positions:
+- name: Master Student
+- name: Harbin Institute of Technology, Shenzhen
+  logo: /assets/images/badges/MIT_sz.png  # Logo is optional
+
+
+email: "jiaxingli342@gmail.com"
+# cv_link: link-to-your-cv-file
+gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
+github: https://github.com/excalibursaberL
+# twitter: your_twitter_id  # Do not include the '@' symbol
+# linkedin: your-linked-in-id
+orcid: 0009-0007-0215-1186
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I have a strong interest in multimodal AI and AI safety. 
+    I have previously worked on research in Autonomous Driving and AI Companion safety; 
+    currently, my main research focuses on <strong>World Models (the JEPA paradigm) and Brain Visual Decoding</strong>.  
+  </p>
+  <p>
+    <p> I am also an ACG enthusiast. I greatly enjoy games such as <a href="https://pjsekai.sega.jp/" target="_blank">Project SEKAI</a>, <a href="https://www.fate-go.jp/" target="_blank">Fate/Grand Order</a>, and <a href="https://relink.granbluefantasy.jp/" target="_blank">Granblue Fantasy: Relink</a>. Currently, I am also following the ongoing anime <a href="https://bleach-anime.com/" target="_blank">Bleach: Thousand-Year Blood War</a>. </p>
+  </p>
+
+portrait_url: /assets/images/photos/knd.webp
+portrait_caption: >-
+  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+
+education:
+- name: Harbin Institute of Technology, Shenzhen
+  logo: /assets/images/badges/MIT_sz.png
+  position: >- 
+    Department of Electrical Engineering and Computer Science <br/>
+    Master Student
+  date: Sep. 2027 - present
+- name: Northeastern University
+  logo: /assets/images/badges/NEU.webp
+  position: Software Colledge
+  date: Sep. 2023 - Jul. 2027
+
+# experience:
+# - name: Peking University
+#   logo: /assets/images/badges/PKU_red.png
+#   position: Research Intern
+#   date: Sep. 2019 - Jul. 2021
+
+awards:
+- name: BYD Scholarship
+  date: 2026
+- name: <a href="https://www.tiaozhanbei.net/" target = "_blank"> First Place in the Grand Prize of Challenge Cup "Bidding for Leadership" Challenge </a>
+  date: 2025
+- name: National Scholarship
+  date: 2024
